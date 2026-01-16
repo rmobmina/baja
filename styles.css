@@ -58,28 +58,31 @@
     --bg-primary: #F3F5EE;
     --bg-secondary: #E7EBDD;
     --bg-card: #FBFCF7;
-    --border-color: rgba(156, 169, 112, 0.28);
+    --border-color: rgba(151, 107, 88, 0.2);
     --accent: #9CA970;
-    --accent-secondary: #76705B;
+    --accent-secondary: #976B58;
 }
 
 /* ========================================
    DARK MODE ONLY STYLES
    These styles ONLY apply when NOT in light mode
+   Softer dark mode with sage green and warm brown accents
    ======================================== */
 html:not([data-theme="light"]) {
-    --text-primary: #E8E4DF;
-    --text-secondary: rgba(212, 195, 177, 0.82);
-    --bg-primary: #0f1a1f;
-    --bg-secondary: #1a2a2a;
-    --bg-card: rgba(66, 83, 90, 0.3);
-    --border-color: rgba(212, 195, 177, 0.18);
+    --deep-navy: #D2B493;
+    --text-primary: #F0EDE8;
+    --text-secondary: rgba(230, 225, 215, 0.85);
+    --bg-primary: #1a2520;
+    --bg-secondary: #232f2a;
+    --bg-card: rgba(156, 169, 112, 0.12);
+    --border-color: rgba(210, 180, 147, 0.2);
+    --accent: #9CA970;
     --accent-secondary: #D2B493;
 }
 
-/* Dark mode hero */
+/* Dark mode hero - sage green and warm brown accents */
 html:not([data-theme="light"]) .hero-title-line:first-child {
-    color: #9CA970;
+    color: #B8C99A;
 }
 
 html:not([data-theme="light"]) .hero-title-line:last-child {
@@ -87,16 +90,16 @@ html:not([data-theme="light"]) .hero-title-line:last-child {
 }
 
 html:not([data-theme="light"]) .hero-badge {
-    background: rgba(156, 169, 112, 0.15);
-    border-color: rgba(156, 169, 112, 0.5);
-    color: #D4C3B1;
+    background: rgba(210, 180, 147, 0.15);
+    border-color: rgba(210, 180, 147, 0.5);
+    color: var(--text-primary);
 }
 
 html:not([data-theme="light"]) .hero-overlay {
-    background: linear-gradient(135deg, rgba(15, 26, 31, 0.9) 0%, rgba(66, 83, 115, 0.6) 100%);
+    background: linear-gradient(135deg, rgba(26, 37, 32, 0.92) 0%, rgba(210, 180, 147, 0.2) 50%, rgba(156, 169, 112, 0.35) 100%);
 }
 
-/* Dark mode cards */
+/* Dark mode cards - sage green with warm brown accents */
 html:not([data-theme="light"]) .event-card,
 html:not([data-theme="light"]) .overview-card,
 html:not([data-theme="light"]) .subteam-card,
@@ -107,8 +110,8 @@ html:not([data-theme="light"]) .member-card,
 html:not([data-theme="light"]) .contact-info-card,
 html:not([data-theme="light"]) .quick-link,
 html:not([data-theme="light"]) .media-card {
-    background: rgba(66, 83, 90, 0.28);
-    border-color: rgba(212, 195, 177, 0.14);
+    background: rgba(156, 169, 112, 0.06);
+    border-color: rgba(210, 180, 147, 0.15);
 }
 
 html:not([data-theme="light"]) .event-card:hover,
@@ -117,217 +120,220 @@ html:not([data-theme="light"]) .subteam-card:hover,
 html:not([data-theme="light"]) .division-card:hover,
 html:not([data-theme="light"]) .benefit-card:hover,
 html:not([data-theme="light"]) .member-card:hover {
-    border-color: #9CA970;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    border-color: #D2B493;
+    box-shadow: 0 12px 32px rgba(210, 180, 147, 0.12);
 }
 
-/* Dark mode list items */
+/* Dark mode list items - warm brown tint */
 html:not([data-theme="light"]) .event-list li {
-    background: rgba(26, 42, 42, 0.7);
-    color: #D4C3B1;
-}
-
-html:not([data-theme="light"]) .division-skills span {
-    background: rgba(26, 42, 42, 0.7);
+    background: rgba(210, 180, 147, 0.12);
     color: #D2B493;
 }
 
-/* Dark mode forms */
+html:not([data-theme="light"]) .division-skills span {
+    background: rgba(210, 180, 147, 0.12);
+    color: #D2B493;
+}
+
+/* Dark mode forms - sage green accents */
 html:not([data-theme="light"]) .form-group input,
 html:not([data-theme="light"]) .form-group select,
 html:not([data-theme="light"]) .form-group textarea {
-    background: rgba(66, 83, 90, 0.3);
-    border-color: rgba(212, 195, 177, 0.18);
-    color: #E8E4DF;
+    background: rgba(156, 169, 112, 0.08);
+    border-color: rgba(156, 169, 112, 0.25);
+    color: var(--text-primary);
 }
 
 html:not([data-theme="light"]) .form-group input::placeholder,
 html:not([data-theme="light"]) .form-group textarea::placeholder {
-    color: rgba(212, 195, 177, 0.5);
+    color: rgba(184, 201, 154, 0.5);
 }
 
 html:not([data-theme="light"]) .form-group input:focus,
 html:not([data-theme="light"]) .form-group select:focus,
 html:not([data-theme="light"]) .form-group textarea:focus {
-    border-color: #9CA970;
-    box-shadow: 0 0 0 3px rgba(156, 169, 112, 0.25);
+    border-color: #B8C99A;
+    box-shadow: 0 0 0 3px rgba(156, 169, 112, 0.2);
 }
 
-/* Dark mode contact */
+/* Dark mode contact - sage green accent */
 html:not([data-theme="light"]) .contact-icon {
-    background: rgba(26, 42, 42, 0.7);
+    background: rgba(156, 169, 112, 0.12);
+    border-color: rgba(156, 169, 112, 0.25);
 }
 
-/* Dark mode team */
+/* Dark mode team - softer with sage green */
 html:not([data-theme="light"]) .member-avatar {
-    background: rgba(26, 42, 42, 0.5);
-    border-color: #976B58;
+    background: rgba(156, 169, 112, 0.1);
+    border-color: rgba(156, 169, 112, 0.3);
 }
 
 html:not([data-theme="light"]) .team-photo {
-    border-color: #976B58;
+    border-color: rgba(156, 169, 112, 0.3);
 }
 
 html:not([data-theme="light"]) .team-card:hover .team-photo {
-    border-color: #D2B493;
+    border-color: #B8C99A;
 }
 
 html:not([data-theme="light"]) .team-category-title {
-    color: #D2B493;
-    border-bottom-color: rgba(151, 107, 88, 0.5);
+    color: #976B58;
+    border-bottom-color: #A07F5C;
 }
 
 html:not([data-theme="light"]) .team-role {
     color: #D2B493;
 }
 
-/* Dark mode sponsors */
+/* Dark mode sponsors - sage green accents */
 html:not([data-theme="light"]) .sponsor-logo-large,
 html:not([data-theme="light"]) .sponsor-logo-medium,
 html:not([data-theme="light"]) .sponsor-logo-small {
-    background: rgba(66, 83, 90, 0.25);
-    border-color: rgba(212, 195, 177, 0.14);
+    background: rgba(156, 169, 112, 0.08);
+    border-color: rgba(156, 169, 112, 0.2);
 }
 
 html:not([data-theme="light"]) .sponsor-logo-large {
-    border-color: rgba(210, 180, 147, 0.5);
-    background: rgba(210, 180, 147, 0.08);
+    border-color: rgba(156, 169, 112, 0.5);
+    background: rgba(156, 169, 112, 0.12);
 }
 
-/* Dark mode milestone */
+/* Dark mode milestone - sage green accents */
 html:not([data-theme="light"]) .milestone-year {
-    color: #D2B493;
+    color: #B8C99A;
 }
 
 html:not([data-theme="light"]) .milestone-content {
-    background: rgba(66, 83, 90, 0.3);
-    border-color: #976B58;
+    background: rgba(156, 169, 112, 0.08);
+    border-color: rgba(156, 169, 112, 0.2);
 }
 
 html:not([data-theme="light"]) .milestone:hover .milestone-content {
-    border-color: #D2B493;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    border-color: #B8C99A;
+    box-shadow: 0 12px 24px rgba(156, 169, 112, 0.15);
 }
 
-/* Dark mode navigation */
+/* Dark mode navigation - softer with sage green */
 html:not([data-theme="light"]) .nav.scrolled {
-    background: #0f1a1f;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    background: rgba(26, 37, 32, 0.95);
+    box-shadow: 0 4px 20px rgba(156, 169, 112, 0.1);
 }
 
 html:not([data-theme="light"]) .theme-toggle {
-    background: rgba(66, 83, 90, 0.35);
-    border-color: rgba(212, 195, 177, 0.18);
+    background: rgba(156, 169, 112, 0.12);
+    border-color: rgba(156, 169, 112, 0.3);
 }
 
 html:not([data-theme="light"]) .theme-toggle:hover {
-    background: rgba(156, 169, 112, 0.35);
+    background: rgba(156, 169, 112, 0.25);
+    border-color: rgba(156, 169, 112, 0.5);
 }
 
-/* Dark mode buttons */
+/* Dark mode buttons - sage green accents */
 html:not([data-theme="light"]) .btn-primary {
     background: #9CA970;
-    color: #0f1a1f;
+    color: #1a2520;
     border-color: #9CA970;
 }
 
 html:not([data-theme="light"]) .btn-primary:hover {
-    background: #D2B493;
-    border-color: #D2B493;
-    color: #0f1a1f;
+    background: #B8C99A;
+    border-color: #B8C99A;
+    color: #1a2520;
 }
 
 html:not([data-theme="light"]) .btn-secondary {
-    color: #E8E4DF;
-    border-color: #E8E4DF;
+    color: #B8C99A;
+    border-color: #B8C99A;
 }
 
 html:not([data-theme="light"]) .btn-secondary:hover {
-    background: #E8E4DF;
-    color: #0f1a1f;
+    background: #B8C99A;
+    color: #1a2520;
 }
 
-/* Dark mode stats */
+/* Dark mode stats - warm brown accents */
 html:not([data-theme="light"]) .about-stats,
 html:not([data-theme="light"]) .competition-stats,
 html:not([data-theme="light"]) .overview-stats {
-    border-top-color: rgba(151, 107, 88, 0.5);
+    border-top-color: rgba(210, 180, 147, 0.4);
 }
 
 html:not([data-theme="light"]) .stat-number {
-    color: #9CA970;
+    color: #D2B493;
 }
 
 html:not([data-theme="light"]) .stat-label {
-    color: rgba(212, 195, 177, 0.8);
+    color: var(--text-secondary);
 }
 
-/* Dark mode LinkedIn links */
+/* Dark mode LinkedIn links - warm brown accent */
 html:not([data-theme="light"]) .linkedin-link,
 html:not([data-theme="light"]) .member-linkedin {
-    background: rgba(66, 83, 90, 0.3);
-    border-color: rgba(212, 195, 177, 0.18);
-    color: rgba(212, 195, 177, 0.8);
+    background: rgba(210, 180, 147, 0.1);
+    border-color: rgba(210, 180, 147, 0.25);
+    color: #D2B493;
 }
 
 html:not([data-theme="light"]) .linkedin-link:hover,
 html:not([data-theme="light"]) .member-linkedin:hover {
-    background: #9CA970;
-    border-color: #9CA970;
-    color: #0f1a1f;
+    background: #D2B493;
+    border-color: #D2B493;
+    color: #1a2520;
 }
 
-/* Dark mode social links */
+/* Dark mode social links - warm brown accent */
 html:not([data-theme="light"]) .social-link {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.15);
-}
-
-html:not([data-theme="light"]) .social-link:hover {
-    background: #9CA970;
-    border-color: #9CA970;
-    color: #0f1a1f;
-}
-
-/* Dark mode packages */
-html:not([data-theme="light"]) .package-tier {
+    background: rgba(210, 180, 147, 0.1);
+    border-color: rgba(210, 180, 147, 0.25);
     color: #D2B493;
 }
 
+html:not([data-theme="light"]) .social-link:hover {
+    background: #D2B493;
+    border-color: #D2B493;
+    color: #1a2520;
+}
+
+/* Dark mode packages - sage green */
+html:not([data-theme="light"]) .package-tier {
+    color: #B8C99A;
+}
+
 html:not([data-theme="light"]) .package-benefits li {
-    color: rgba(212, 195, 177, 0.8);
-    border-bottom-color: rgba(212, 195, 177, 0.15);
+    color: var(--text-secondary);
+    border-bottom-color: rgba(156, 169, 112, 0.15);
 }
 
-/* Dark mode donate */
+/* Dark mode donate - sage green tint */
 html:not([data-theme="light"]) .donate-card {
-    background: rgba(66, 83, 90, 0.25);
-    border-color: #976B58;
+    background: rgba(156, 169, 112, 0.08);
+    border-color: rgba(156, 169, 112, 0.25);
 }
 
-/* Dark mode blockquote */
+/* Dark mode blockquote - sage green accent */
 html:not([data-theme="light"]) .mission-content blockquote {
-    background: rgba(66, 83, 90, 0.25);
-    border-left-color: #D2B493;
-    color: rgba(212, 195, 177, 0.85);
+    background: rgba(156, 169, 112, 0.08);
+    border-left-color: #B8C99A;
+    color: var(--text-secondary);
 }
 
-/* Dark mode featured subteam */
+/* Dark mode featured subteam - sage green and brown gradient */
 html:not([data-theme="light"]) .subteam-featured {
-    background: linear-gradient(135deg, #0f1a1f 0%, #425373 100%);
+    background: linear-gradient(135deg, rgba(26, 37, 32, 0.95) 0%, rgba(210, 180, 147, 0.15) 50%, rgba(156, 169, 112, 0.25) 100%);
 }
 
 html:not([data-theme="light"]) .subteam-featured p {
-    color: rgba(212, 195, 177, 0.85);
+    color: var(--text-secondary);
 }
 
-/* Dark mode join section */
+/* Dark mode join section - sage green and brown gradient */
 html:not([data-theme="light"]) .join {
-    background: linear-gradient(135deg, #0f1a1f 0%, #1a2a2a 100%);
+    background: linear-gradient(135deg, rgba(26, 37, 32, 0.95) 0%, rgba(210, 180, 147, 0.15) 50%, rgba(156, 169, 112, 0.3) 100%);
 }
 
 html:not([data-theme="light"]) .join-title {
-    color: #E8E4DF;
+    color: var(--text-primary);
 }
 
 html:not([data-theme="light"]) .join-title .accent {
@@ -335,11 +341,11 @@ html:not([data-theme="light"]) .join-title .accent {
 }
 
 html:not([data-theme="light"]) .join-subtitle {
-    color: rgba(212, 195, 177, 0.75);
+    color: var(--text-secondary);
 }
 
 html:not([data-theme="light"]) .join-feature {
-    color: rgba(232, 228, 223, 0.9);
+    color: var(--text-primary);
 }
 
 html:not([data-theme="light"]) .join-feature svg {
@@ -347,43 +353,70 @@ html:not([data-theme="light"]) .join-feature svg {
 }
 
 html:not([data-theme="light"]) .join-social span {
-    color: rgba(212, 195, 177, 0.5);
+    color: var(--text-secondary);
 }
 
-/* Dark mode home CTA */
+/* Dark mode home CTA - sage green and brown gradient */
 html:not([data-theme="light"]) .home-cta {
-    background: linear-gradient(135deg, #0f1a1f 0%, #425373 100%);
+    background: linear-gradient(135deg, rgba(26, 37, 32, 0.95) 0%, rgba(210, 180, 147, 0.12) 50%, rgba(156, 169, 112, 0.25) 100%);
 }
 
 html:not([data-theme="light"]) .cta-content h2 {
-    color: #E8E4DF;
+    color: var(--text-primary);
 }
 
 html:not([data-theme="light"]) .cta-content p {
-    color: rgba(212, 195, 177, 0.8);
+    color: var(--text-secondary);
 }
 
-/* Dark mode sponsor CTA */
+/* Dark mode sponsor CTA - sage green accent */
 html:not([data-theme="light"]) .sponsor-cta {
-    background: linear-gradient(135deg, rgba(151, 107, 88, 0.15) 0%, rgba(160, 127, 92, 0.08) 100%);
-    border-color: rgba(151, 107, 88, 0.5);
+    background: linear-gradient(135deg, rgba(156, 169, 112, 0.1) 0%, rgba(156, 169, 112, 0.05) 100%);
+    border-color: rgba(156, 169, 112, 0.4);
 }
 
 html:not([data-theme="light"]) .sponsor-cta h3 {
-    color: #E8E4DF;
+    color: var(--text-primary);
 }
 
 html:not([data-theme="light"]) .sponsor-cta p {
-    color: rgba(212, 195, 177, 0.8);
+    color: var(--text-secondary);
 }
 
-/* Dark mode scrollbar */
+/* Dark mode scrollbar - sage green */
 html:not([data-theme="light"]) .history-track-container::-webkit-scrollbar-track {
-    background: rgba(66, 83, 90, 0.25);
+    background: rgba(156, 169, 112, 0.1);
 }
 
 html:not([data-theme="light"]) .history-track-container::-webkit-scrollbar-thumb {
-    background: #D2B493;
+    background: #9CA970;
+}
+
+/* Dark mode footer - blue background like light mode */
+html:not([data-theme="light"]) .footer {
+    background: #061A38;
+    color: #FFFFFF;
+    border-top-color: rgba(210, 180, 147, 0.3);
+}
+
+html:not([data-theme="light"]) .footer-brand p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+html:not([data-theme="light"]) .footer-col h4 {
+    color: #9CA970;
+}
+
+html:not([data-theme="light"]) .footer-col a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+html:not([data-theme="light"]) .footer-col a:hover {
+    color: #FFFFFF;
+}
+
+html:not([data-theme="light"]) .footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* Reset & Base */
@@ -472,8 +505,18 @@ img {
     color: var(--forest-green);
 }
 
+/* Dark mode: accent-forest becomes white for visibility */
+html:not([data-theme="light"]) .accent-forest {
+    color: #FFFFFF;
+}
+
 .accent-brown {
     color: var(--dust-brown);
+}
+
+/* Dark mode: accent-brown uses the same brown as light mode */
+html:not([data-theme="light"]) .accent-brown {
+    color: #976B58;
 }
 
 .accent-white {
@@ -768,7 +811,7 @@ img {
 }
 
 [data-theme="light"] .hero-overlay {
-    background: linear-gradient(135deg, rgba(245, 242, 237, 0.92) 0%, rgba(156, 169, 112, 0.35) 100%);
+    background: linear-gradient(135deg, rgba(245, 242, 237, 0.92) 0%, rgba(151, 107, 88, 0.2) 50%, rgba(156, 169, 112, 0.3) 100%);
 }
 
 .hero-bg {
@@ -1039,7 +1082,8 @@ img {
 }
 
 [data-theme="light"] .event-list li {
-    background: var(--soft-grey);
+    background: rgba(151, 107, 88, 0.1);
+    color: var(--dust-brown);
 }
 
 .about-stats {
@@ -1280,7 +1324,7 @@ img {
 }
 
 [data-theme="light"] .subteam-featured {
-    background: linear-gradient(135deg, var(--warm-light) 0%, rgba(156, 169, 112, 0.35) 100%);
+    background: linear-gradient(135deg, var(--warm-light) 0%, rgba(151, 107, 88, 0.12) 50%, rgba(156, 169, 112, 0.25) 100%);
     color: var(--text-primary);
 }
 
@@ -1543,7 +1587,7 @@ img {
 }
 
 [data-theme="light"] .join {
-    background: linear-gradient(135deg, var(--warm-light) 0%, rgba(156, 169, 112, 0.25) 100%);
+    background: linear-gradient(135deg, var(--warm-light) 0%, rgba(151, 107, 88, 0.15) 50%, rgba(156, 169, 112, 0.2) 100%);
 }
 
 .join-bg {
@@ -1665,7 +1709,7 @@ img {
 }
 
 [data-theme="light"] .join-title .accent {
-    color: var(--forest-green);
+    color: var(--dust-brown);
 }
 
 [data-theme="light"] .join-subtitle {
@@ -1677,7 +1721,7 @@ img {
 }
 
 [data-theme="light"] .join-feature svg {
-    color: var(--accent);
+    color: var(--dust-brown);
 }
 
 [data-theme="light"] .join-social span {
@@ -1685,14 +1729,14 @@ img {
 }
 
 [data-theme="light"] .social-link {
-    background: rgba(94, 99, 76, 0.08);
-    border-color: rgba(94, 99, 76, 0.2);
+    background: rgba(151, 107, 88, 0.08);
+    border-color: rgba(151, 107, 88, 0.2);
     color: var(--text-primary);
 }
 
 [data-theme="light"] .social-link:hover {
-    background: var(--accent);
-    border-color: var(--accent);
+    background: var(--dust-brown);
+    border-color: var(--dust-brown);
     color: #FFFFFF;
 }
 
@@ -2078,7 +2122,7 @@ img {
 }
 
 [data-theme="light"] .home-cta {
-    background: linear-gradient(135deg, #F5F2ED 0%, rgba(156, 169, 112, 0.2) 100%);
+    background: linear-gradient(135deg, #F5F2ED 0%, rgba(151, 107, 88, 0.1) 50%, rgba(156, 169, 112, 0.15) 100%);
 }
 
 .cta-content {
@@ -2611,7 +2655,8 @@ img {
 }
 
 [data-theme="light"] .division-skills span {
-    background: var(--bg-secondary);
+    background: rgba(151, 107, 88, 0.1);
+    color: var(--dust-brown);
 }
 
 /* Join Section */
@@ -2623,7 +2668,7 @@ img {
 }
 
 [data-theme="light"] .join-section {
-    background: linear-gradient(135deg, var(--accent) 0%, var(--olive) 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--dust-brown) 50%, var(--olive) 100%);
 }
 
 .join-section .join-content {
@@ -2746,6 +2791,35 @@ img {
 
 [data-theme="light"] .join-section .join-social > span {
     color: rgba(255, 255, 255, 0.7);
+}
+
+/* Dark mode join-section - sage green and brown gradient */
+html:not([data-theme="light"]) .join-section {
+    background: linear-gradient(135deg, rgba(26, 37, 32, 0.95) 0%, rgba(210, 180, 147, 0.15) 50%, rgba(156, 169, 112, 0.35) 100%);
+}
+
+html:not([data-theme="light"]) .join-section .join-content h2 {
+    color: var(--text-primary);
+}
+
+html:not([data-theme="light"]) .join-section .join-title .accent {
+    color: #D2B493;
+}
+
+html:not([data-theme="light"]) .join-section .join-subtitle {
+    color: var(--text-secondary);
+}
+
+html:not([data-theme="light"]) .join-section .join-feature {
+    color: var(--text-primary);
+}
+
+html:not([data-theme="light"]) .join-section .join-feature svg {
+    color: #D2B493;
+}
+
+html:not([data-theme="light"]) .join-section .join-social > span {
+    color: var(--text-secondary);
 }
 
 .social-link svg {
