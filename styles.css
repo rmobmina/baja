@@ -2598,6 +2598,14 @@ html:not([data-theme="light"]) .accent-brown {
     justify-self: center;
 }
 
+/* Center Suspension & Steering (5th card, last odd in technical divisions) */
+.divisions-section:not(.divisions-ops) .divisions-grid .division-card:nth-child(5):last-child {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    width: 100%;
+    justify-self: center;
+}
+
 .division-card {
     display: grid;
     grid-template-columns: 1fr;
@@ -2657,6 +2665,61 @@ html:not([data-theme="light"]) .accent-brown {
 [data-theme="light"] .division-skills span {
     background: rgba(151, 107, 88, 0.1);
     color: var(--dust-brown);
+}
+
+/* Division Team Members */
+.division-team {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.division-lead {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.lead-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    background: var(--accent);
+    color: #FFFFFF;
+    border-radius: 3px;
+}
+
+[data-theme="light"] .lead-label {
+    background: var(--dust-brown);
+    color: #FFFFFF;
+}
+
+.lead-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.division-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    justify-content: center;
+}
+
+.division-members span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.division-members span:not(:last-child)::after {
+    content: "•";
+    margin-left: 12px;
+    color: var(--border-color);
 }
 
 /* Join Section */
@@ -2867,6 +2930,42 @@ html:not([data-theme="light"]) .join-section .join-social > span {
     justify-content: center;
 }
 
+.leadership-centered {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px 48px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* First row - 2 cards centered */
+.leadership-centered .team-card:nth-child(1),
+.leadership-centered .team-card:nth-child(2) {
+    flex: 0 0 auto;
+}
+
+/* Second row - 3 cards centered */
+.leadership-centered .team-card:nth-child(3),
+.leadership-centered .team-card:nth-child(4),
+.leadership-centered .team-card:nth-child(5) {
+    flex: 0 0 auto;
+}
+
+/* Force second row to wrap */
+.leadership-centered::before {
+    content: '';
+    flex-basis: 100%;
+    height: 0;
+    order: 2;
+}
+
+.leadership-centered .team-card:nth-child(1) { order: 1; }
+.leadership-centered .team-card:nth-child(2) { order: 1; }
+.leadership-centered .team-card:nth-child(3) { order: 3; }
+.leadership-centered .team-card:nth-child(4) { order: 3; }
+.leadership-centered .team-card:nth-child(5) { order: 3; }
+
 .team-card {
     text-align: center;
     width: 100%;
@@ -2903,6 +3002,12 @@ html:not([data-theme="light"]) .join-section .join-social > span {
     width: 50%;
     height: 50%;
     opacity: 0.4;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .team-info h3 {
@@ -2993,6 +3098,13 @@ html:not([data-theme="light"]) .join-section .join-social > span {
     width: 50%;
     height: 50%;
     opacity: 0.4;
+}
+
+.member-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .member-name {
