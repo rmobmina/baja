@@ -1884,6 +1884,18 @@ html:not([data-theme="light"]) .hero .btn-secondary {
     margin-top: 8px;
 }
 
+.footer-uoft a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.footer-uoft a:hover {
+    opacity: 1;
+}
+
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
@@ -2161,16 +2173,37 @@ html:not([data-theme="light"]) .hero .btn-secondary {
 .home-cta {
     padding: 64px 0;
     background: linear-gradient(135deg, var(--deep-navy) 0%, var(--steel-blue) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.home-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
 }
 
 [data-theme="light"] .home-cta {
     background: linear-gradient(135deg, #F5F2ED 0%, rgba(151, 107, 88, 0.1) 50%, rgba(156, 169, 112, 0.15) 100%);
 }
 
+[data-theme="light"] .home-cta::before {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
 .cta-content {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .cta-content h2 {
@@ -2190,6 +2223,30 @@ html:not([data-theme="light"]) .hero .btn-secondary {
 .about-baja {
     padding: var(--section-padding) 0;
     background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-baja::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+}
+
+html:not([data-theme="light"]) .about-baja::before {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+.about-baja .container {
+    position: relative;
+    z-index: 1;
 }
 
 .about-intro-grid {
@@ -2558,12 +2615,33 @@ html:not([data-theme="light"]) .hero .btn-secondary {
 .mission-section {
     padding: var(--section-padding) 0;
     background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+}
+
+html:not([data-theme="light"]) .mission-section::before {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
 }
 
 .mission-content {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .mission-content h2 {
@@ -2589,6 +2667,30 @@ html:not([data-theme="light"]) .hero .btn-secondary {
 .divisions-intro {
     padding: 60px 0;
     background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.divisions-intro::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+}
+
+html:not([data-theme="light"]) .divisions-intro::before {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+.divisions-intro .container {
+    position: relative;
+    z-index: 1;
 }
 
 .lead-text {
@@ -3229,6 +3331,25 @@ html:not([data-theme="light"]) .join-section .join-social > span {
 .sponsor-message-section {
     padding: 60px 0;
     background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-message-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+}
+
+html:not([data-theme="light"]) .sponsor-message-section::before {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
 }
 
 .sponsor-quote {
@@ -3239,6 +3360,8 @@ html:not([data-theme="light"]) .join-section .join-social > span {
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.8;
+    position: relative;
+    z-index: 1;
 }
 
 .sponsor-tiers-section {
@@ -3383,6 +3506,30 @@ html:not([data-theme="light"]) .join-section .join-social > span {
 .packages-section {
     padding: var(--section-padding) 0;
     background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.packages-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+}
+
+html:not([data-theme="light"]) .packages-section::before {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+.packages-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 .packages-grid {
@@ -3463,6 +3610,30 @@ html:not([data-theme="light"]) .join-section .join-social > span {
 .media-section {
     padding: var(--section-padding) 0;
     background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.media-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+}
+
+html:not([data-theme="light"]) .media-section::before {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+.media-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 .media-section-header {
@@ -3737,12 +3908,33 @@ html:not([data-theme="light"]) .join-section .join-social > span {
 .contact-section {
     padding: var(--section-padding) 0;
     background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+}
+
+html:not([data-theme="light"]) .contact-section::before {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
 }
 
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-form-wrapper h2 {
